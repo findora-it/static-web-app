@@ -2,31 +2,23 @@
 
 ## Sommario
 
-- [Panoramica](#panoramica)
 - [Prerequisiti](#prerequisiti)
 - [Installazione](#installazione)
 - [Avvio del Progetto](#avvio-del-progetto)
 - [Build per la Produzione](#build-per-la-produzione)
 - [Anteprima della Build di Produzione](#anteprima-della-build-di-produzione)
-- [Linting](#linting)
 - [Deploy del Progetto](#deploy-del-progetto)
 - [Struttura del Progetto](#struttura-del-progetto)
 - [Tecnologie Utilizzate](#tecnologie-utilizzate)
 - [Dipendenze](#dipendenze)
-- [Supporto Browser](#supporto-browser)
 - [File di Configurazione](#file-di-configurazione)
-- [Informazioni Aggiuntive](#informazioni-aggiuntive)
-
-## Panoramica
-
-Findora è un progetto sviluppato utilizzando React, Tailwind CSS, e Vite come tool di build. Questo README ha lo scopo di fornire una guida completa per installare, configurare e avviare il progetto.
 
 ## Prerequisiti
 
 Prima di iniziare, assicurati di avere installato i seguenti strumenti:
 
 - [Node.js](https://nodejs.org/) (versione 14.0 o superiore)
-- [npm](https://www.npmjs.com/) o [yarn](https://yarnpkg.com/) per la gestione dei pacchetti
+- [npm](https://www.npmjs.com/) o per la gestione dei pacchetti
 
 ## Installazione
 
@@ -35,22 +27,18 @@ Per installare il progetto, segui questi passaggi:
 1. Clona il repository:
 
    ```bash
-   git clone <URL_REPOSITORY>
+   git clone https://github.com/findora-it/static-web-app.git
    ```
 
 2. Entra nella directory del progetto:
 
    ```bash
-   cd findora_-_react_tailwind
+   cd static-web-app
    ```
 
 3. Installa le dipendenze necessarie:
    ```bash
    npm install
-   ```
-   oppure, se preferisci usare yarn:
-   ```bash
-   yarn install
    ```
 
 ## Avvio del Progetto
@@ -59,12 +47,6 @@ Per avviare il progetto in modalità di sviluppo:
 
 ```bash
 npm start
-```
-
-oppure, usando yarn:
-
-```bash
-yarn start
 ```
 
 Questo comando utilizza Vite per avviare un server di sviluppo e permette di visualizzare il progetto nel browser all'indirizzo [http://localhost:5173](http://localhost:5173).
@@ -88,16 +70,6 @@ npm run preview
 ```
 
 Questo avvierà un server che simula la versione di produzione del progetto.
-
-## Linting
-
-Per garantire la qualità del codice, è possibile eseguire ESLint per controllare eventuali errori e seguire le convenzioni stilistiche definite:
-
-```bash
-npm run lint
-```
-
-Il comando ESLint è configurato per interrompere in caso di errori e non accetta più di zero avvisi (`--max-warnings 0`).
 
 ## Deploy del Progetto
 
@@ -156,21 +128,8 @@ Questo comando rimuove la directory `dist` per assicurare una build pulita.
 - `gh-pages` - Per il deploy su GitHub Pages.
 - `cross-env` - Per gestire le variabili d'ambiente in modo cross-platform.
 
-## Supporto Browser
-
-Il progetto è compatibile con i seguenti browser:
-
-- **Produzione**: tutti i browser moderni con quota di mercato superiore allo 0.2% e che non sono considerati "dead" (non più supportati).
-- **Sviluppo**: Ultima versione di Chrome, Firefox e Safari.
-
 ## File di Configurazione
 
 - **`package.json`** - Contiene le informazioni di configurazione del progetto e gli script utili.
 - **`vite.config.js`** - Configurazione di Vite per gestire il build e il server di sviluppo.
 - **`.eslintrc`** - File di configurazione di ESLint per le regole di linting.
-
-## Informazioni Aggiuntive
-
-- Usa `npm run start` per avviare l'ambiente di sviluppo.
-- Le build per la produzione possono essere deployate direttamente su server statici.
-- ESLint e TypeScript sono configurati per garantire qualità e robustezza del codice.
