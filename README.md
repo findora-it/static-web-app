@@ -103,13 +103,13 @@ Il comando ESLint è configurato per interrompere in caso di errori e non accett
 
 Per effettuare il deploy del progetto su GitHub Pages:
 
-1. Assicurati di avere creato una build di produzione:
+1. Esegui il comando `predeploy` per impostare la variabile di ambiente `NODE_ENV` su `production` e creare una build di produzione:
 
    ```bash
    npm run predeploy
    ```
 
-2. Effettua il deploy della build:
+2. Esegui il comando `deploy` per pubblicare la build di produzione su GitHub Pages utilizzando il contenuto della directory `dist`:
    ```bash
    npm run deploy
    ```
