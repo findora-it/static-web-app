@@ -37,7 +37,7 @@ Per installare il progetto, segui questi passaggi:
 
 2. Entra nella directory del progetto:
    ```bash
-   cd findora_-_react_tailwind
+   cd static-web-app
    ```
 
 3. Installa le dipendenze necessarie:
