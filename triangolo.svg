@@ -1,0 +1,9 @@
+<svg 
+ className="transform rotate-90"
+  viewBox="0 0 14 12" 
+  fill="none" 
+  xmlns="http://www.w3.org/2000/svg"
+  style="transform: rotate(270deg);"
+>
+  <path d="M7 12L0.504808 0.750001L13.4952 0.75L7 12Z" fill="#1ab58a"/>
+</svg>
