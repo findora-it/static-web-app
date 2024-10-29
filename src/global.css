@@ -1,0 +1,82 @@
+@font-face {
+  font-family: "Gotham";
+  src: url("/fonts/gotham/Gotham-Light.otf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Gotham";
+  src: url("/fonts/gotham/Gotham-Medium.otf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Gotham";
+  src: url("/fonts/gotham/Gotham-Bold.otf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+body {
+  @apply leading-[normal] m-0;
+}
+*,
+::before,
+::after {
+  border-width: 0;
+}
+
+body.modal-open {
+  overflow: hidden;
+}
+
+/* WIP SCROLLBAR DA FAR VEDERE A DODO */
+
+/* global.css */
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1ab58a; /* verde-1-findora */
+
+  background-clip: content-box;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #158f6d; /* Una tonalità più scura per l'effetto hover */
+  background-clip: content-box;
+}
+
+/* Stile per Firefox */
+* {
+  scrollbar-color: #1ab58a transparent;
+}
+
+/* Stile globale per la scrollbar */
+* {
+  scrollbar-color: #1ab58a transparent; /* Firefox */
+}
+
+*::-webkit-scrollbar {
+  width: auto; /* Mantiene la larghezza originale */
+}
+
+*::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #1ab58a; /* verde-1-findora */
+  border-radius: 4px;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  background-color: #158f6d; /* Una tonalità più scura per l'effetto hover */
+}

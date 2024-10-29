@@ -8,6 +8,8 @@
 - [Avvio del Progetto](#avvio-del-progetto)
 - [Build per la Produzione](#build-per-la-produzione)
 - [Anteprima della Build di Produzione](#anteprima-della-build-di-produzione)
+- [Linting](#linting)
+- [Deploy del Progetto](#deploy-del-progetto)
 - [Struttura del Progetto](#struttura-del-progetto)
 - [Tecnologie Utilizzate](#tecnologie-utilizzate)
 - [Dipendenze](#dipendenze)
@@ -31,18 +33,24 @@ Prima di iniziare, assicurati di avere installato i seguenti strumenti:
 Per installare il progetto, segui questi passaggi:
 
 1. Clona il repository:
+
    ```bash
    git clone <URL_REPOSITORY>
    ```
 
 2. Entra nella directory del progetto:
+
    ```bash
-   cd static-web-app
+   cd findora_-_react_tailwind
    ```
 
 3. Installa le dipendenze necessarie:
    ```bash
    npm install
+   ```
+   oppure, se preferisci usare yarn:
+   ```bash
+   yarn install
    ```
 
 ## Avvio del Progetto
@@ -53,17 +61,23 @@ Per avviare il progetto in modalità di sviluppo:
 npm start
 ```
 
-Questo comando utilizza Vite per avviare un server di sviluppo e permette di visualizzare il progetto nel browser all'indirizzo [http://localhost:3000](http://localhost:3000).
+oppure, usando yarn:
+
+```bash
+yarn start
+```
+
+Questo comando utilizza Vite per avviare un server di sviluppo e permette di visualizzare il progetto nel browser all'indirizzo [http://localhost:5173](http://localhost:5173).
 
 ## Build per la Produzione
 
-Per buildare e mandare in produzione il progetto:
+Per creare una build ottimizzata per la produzione:
 
 ```bash
 npm run build
 ```
 
-Il comando sopra compila il codice TypeScript e utilizza Vite per creare la build di produzione all'interno della directory `dist`.
+Il comando sopra utilizza Vite per creare la build di produzione all'interno della directory `dist`.
 
 ## Anteprima della Build di Produzione
 
@@ -74,6 +88,43 @@ npm run preview
 ```
 
 Questo avvierà un server che simula la versione di produzione del progetto.
+
+## Linting
+
+Per garantire la qualità del codice, è possibile eseguire ESLint per controllare eventuali errori e seguire le convenzioni stilistiche definite:
+
+```bash
+npm run lint
+```
+
+Il comando ESLint è configurato per interrompere in caso di errori e non accetta più di zero avvisi (`--max-warnings 0`).
+
+## Deploy del Progetto
+
+Per effettuare il deploy del progetto su GitHub Pages:
+
+1. Assicurati di avere creato una build di produzione:
+
+   ```bash
+   npm run predeploy
+   ```
+
+2. Effettua il deploy della build:
+   ```bash
+   npm run deploy
+   ```
+
+Questi comandi utilizzano `gh-pages` per pubblicare i contenuti della directory `dist` su GitHub Pages. Assicurati di avere configurato correttamente il repository GitHub per supportare il deploy.
+
+## Pulizia della Build
+
+Per rimuovere la build di produzione esistente:
+
+```bash
+npm run clean
+```
+
+Questo comando rimuove la directory `dist` per assicurare una build pulita.
 
 ## Struttura del Progetto
 
@@ -91,19 +142,24 @@ Questo avvierà un server che simula la versione di produzione del progetto.
 ## Dipendenze
 
 ### Dipendenze di Produzione
+
 - `react`, `react-dom` - Fondamentali per la UI.
 - `react-router-dom` - Per la gestione del routing nel progetto.
 - `tailwindcss-animated` - Per facilitare animazioni con Tailwind.
 - `typescript` - Per una maggiore sicurezza del codice.
 
 ### Dipendenze di Sviluppo
+
 - `@typescript-eslint` - Linter per TypeScript.
 - `vite` - Tool di build per l'avvio del progetto.
 - `tailwindcss`, `postcss`, `autoprefixer` - Per la configurazione del CSS.
+- `gh-pages` - Per il deploy su GitHub Pages.
+- `cross-env` - Per gestire le variabili d'ambiente in modo cross-platform.
 
 ## Supporto Browser
 
 Il progetto è compatibile con i seguenti browser:
+
 - **Produzione**: tutti i browser moderni con quota di mercato superiore allo 0.2% e che non sono considerati "dead" (non più supportati).
 - **Sviluppo**: Ultima versione di Chrome, Firefox e Safari.
 
@@ -118,4 +174,3 @@ Il progetto è compatibile con i seguenti browser:
 - Usa `npm run start` per avviare l'ambiente di sviluppo.
 - Le build per la produzione possono essere deployate direttamente su server statici.
 - ESLint e TypeScript sono configurati per garantire qualità e robustezza del codice.
-
