@@ -96,8 +96,8 @@ Per effettuare il deploy del progetto su GitHub Pages:
    npm run deploy
    ```
 
-   > [!WARNING]
-   > Prima di eseguire il deploy, verifica che il tuo repository GitHub sia configurato correttamente per supportare GitHub Pages. Eventuali errori nella configurazione potrebbero impedire la pubblicazione corretta.
+> [!WARNING]
+> Prima di eseguire il deploy, verifica che il tuo repository GitHub sia configurato correttamente per supportare GitHub Pages. Eventuali errori nella configurazione potrebbero impedire la pubblicazione corretta.
 
 Questi comandi utilizzano gh-pages per pubblicare i contenuti della directory `dist` su [GitHub Pages](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/verifying-your-custom-domain-for-github-pages). Assicurati di avere configurato correttamente il repository GitHub per supportare il deploy.
 
