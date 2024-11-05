@@ -133,12 +133,12 @@ Il sito è hostato su GitHub Pages, mentre il dominio personalizzato è gestito 
 
 ## Tecnologie Utilizzate
 
-- **React** - Libreria per costruire l'interfaccia utente.
-- **Tailwind CSS** - Framework CSS per il design.
-- **Vite** - Tool di build per progetti veloci e performanti.
-- **TypeScript** - Superset di JavaScript per un typing più robusto.
+- [**React**](https://reactjs.org/) - Libreria per costruire l'interfaccia utente.
+- [**Tailwind CSS**](https://tailwindcss.com/) - Framework CSS per il design.
+- [**Vite**](https://vitejs.dev/) - Tool di build per progetti veloci e performanti.
+- [**TypeScript**](https://www.typescriptlang.org/) - Superset di JavaScript per un typing più robusto.
 
-## Dipendenze
+## Dipendenze:
 
 ### Dipendenze di Produzione
 
